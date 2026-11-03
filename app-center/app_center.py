@@ -88,7 +88,8 @@ class AppCenterApp(ctk.CTk):
             width=220,
         )
         self.sidebar.grid(row=1, column=0, sticky="nsew")
-        self.sidebar.grid_propagate(False)
+        # CTkScrollableFrame.grid_propagate() doesn't accept a flag in this
+        # version; sticky="nsew" already makes it fill its grid cell.
 
         ctk.CTkLabel(
             self.sidebar,
