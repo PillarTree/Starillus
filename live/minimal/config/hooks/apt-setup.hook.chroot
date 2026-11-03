@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+# Install Starillus local .deb packages from the chroot includes
+mkdir -p /opt/starillus-packages
+cp /config/includes.chroot/opt/starillus-packages/*.deb /opt/starillus-packages/ 2>/dev/null || true
+
+dpkg -i /opt/starillus-packages/*.deb 2>/dev/null || true
+apt-get -f install -y 2>/dev/null || true
+
+exit 0

@@ -1,0 +1,29 @@
+#!/bin/sh
+set -e
+
+# Set up Starillus APT repository key and sources in the chroot
+mkdir -p /etc/apt/keyrings
+cp /usr/share/keyrings/starillus-repo.gpg.key /etc/apt/keyrings/ 2>/dev/null || true
+
+cat > /etc/apt/sources.list.d/starillus.list <<'EOF'
+deb http://repo.starillus.dev/apt stable main
+EOF
+
+# Install customtkinter via pip (not available as deb)
+pip3 install --break-system-packages customtkinter darkdetect 2>/dev/null || true
+
+# Enable Flathub remote
+flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo 2>/dev/null || true
+
+# Set up ClamAV
+freshclam 2>/dev/null || true
+
+# Create starillus-av user/group
+useradd --system --no-create-home starillus-av 2>/dev/null || true
+
+# Set default wallpaper and theme
+mkdir -p /etc/skel/.pillarium/themes
+cp /usr/share/starillus/themes/starillus-dark.theme.json /etc/skel/.pillarium/themes/ 2>/dev/null || true
+cp /usr/share/starillus/wallpapers/starillus-dawn.png /etc/skel/pillarium_wallpaper.png 2>/dev/null || true
+
+exit 0

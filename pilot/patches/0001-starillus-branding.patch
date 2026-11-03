@@ -1,0 +1,25 @@
+# Pilot branding patch — applied on top of Chromium source
+
+From: Starillus Developers <starillus@users.noreply.github.com>
+Subject: [PATCH] Pilot: rebrand Chromium as Pilot for Starillus OS
+
+--- a/chrome/app/resources/generated_resources.grd
++++ b/chrome/app/resources/generated_resources.grd
+@@ IDS_SHORT_PRODUCT_NAME
+- "Chromium"
++ "Pilot"
+
+@@ IDS_PRODUCT_NAME
+- "Chromium"
++ "Pilot Browser"
+
+--- a/chrome/app/resources/id_map_generated.h
+@@ IDS_SHORT_PRODUCT_NAME 101
+@@ IDS_PRODUCT_NAME 102
+
+--- a/chrome/common/chrome_constants.cc
+@@ const char kUserAgentSuffix[] = " Chromium/"
++ const char kUserAgentSuffix[] = " Pilot/"
+
+--- a/chrome/app/google_chrome_100.png
+[binary replaced with starillus pilot logo]

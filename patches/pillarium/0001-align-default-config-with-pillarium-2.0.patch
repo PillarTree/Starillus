@@ -1,0 +1,22 @@
+diff --git a/pillarium/defaults/config.json b/pillarium/defaults/config.json
+--- a/pillarium/defaults/config.json
++++ b/pillarium/defaults/config.json
+@@ -5,10 +5,20 @@
+   "quick_launch": [],
+   "desktop_icons": [],
+   "custom_widgets": [],
++  "theme": "starillus-dark",
++  "wallpaper": "starillus-dawn",
++  "quick_launch": [
++    { "cmd": ["pilot"], "label": "Pilot", "icon": "pilot", "desktop_file": "/usr/share/applications/pilot.desktop" },
++    { "cmd": ["xterm"], "label": "Terminal", "icon": "mini.xterm", "desktop_file": "/usr/share/applications/debian-xterm.desktop" },
++    { "cmd": ["starillus-app-center"], "label": "App Center", "icon": "starillus-app-center", "desktop_file": "/usr/share/applications/starillus-app-center.desktop" },
++    { "cmd": ["planet-control-center"], "label": "Settings", "icon": "preferences-system", "desktop_file": "/usr/share/applications/planet-control-center.desktop" }
++  ],
++  "desktop_icons": [
++    { "cmd": ["starillus-app-center"], "label": "App Center", "icon": "starillus-app-center", "desktop_file": "/usr/share/applications/starillus-app-center.desktop" },
++    { "cmd": ["pilot"], "label": "Pilot", "icon": "pilot", "desktop_file": "/usr/share/applications/pilot.desktop" },
++    { "cmd": ["xterm"], "label": "Terminal", "icon": "mini.xterm", "desktop_file": "/usr/share/applications/debian-xterm.desktop" }
++  ],
+   "time_format": "%H:%M",
+   "date_format": "%m/%d",

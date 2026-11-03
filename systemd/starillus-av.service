@@ -1,0 +1,16 @@
+[Unit]
+Description=Starillus Anti-Virus daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStartPre=/usr/bin/freshclam --quiet
+ExecStart=/usr/sbin/starillus-av --daemon
+Restart=always
+RestartSec=5
+User=starillus-av
+Group=starillus-av
+
+[Install]
+WantedBy=multi-user.target

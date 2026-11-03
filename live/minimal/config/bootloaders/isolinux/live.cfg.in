@@ -1,0 +1,10 @@
+label live
+	menu label ^Live Starillus
+	menu default
+	kernel @KERNEL@
+	append initrd=@INITRD@ boot=live config @LB_BOOTAPPEND_LIVE@
+
+label live-failsafe
+	menu label ^Live Starillus (failsafe)
+	kernel @KERNEL@
+	append initrd=@INITRD@ boot=live config @LB_BOOTAPPEND_LIVE@ @LB_BOOTAPPEND_FAILSAFE@

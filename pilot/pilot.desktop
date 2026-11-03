@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Pilot
+GenericName=Web Browser
+Comment=Browse the web with Pilot (Chromium fork)
+Exec=pilot %U
+Icon=pilot
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
+StartupNotify=true
+StartupWMClass=pilot
+Keywords=web;browser;internet;chromium;pilot;starillus;

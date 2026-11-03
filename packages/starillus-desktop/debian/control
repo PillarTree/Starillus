@@ -1,0 +1,34 @@
+Source: starillus-desktop
+Section: metapackages
+Priority: optional
+Maintainer: Starillus Developers <starillus@users.noreply.github.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/PillarTree/Starillus
+Vcs-Browser: https://github.com/PillarTree/Starillus
+
+Package: starillus-desktop
+Architecture: all
+Depends: pillarium (>= 2.0.0), spacer-greeter (>= 2.0.0), cadet (>= 0.1.0), libreoffice,
+         pilot, flatpak, flatpak-xdg-utils, starillus-app-center, starillus-av
+Recommends: planet (>= 0.1.0), planet-control-center (>= 0.1.0),
+            lightdm, network-manager
+Description: Starillus desktop environment (metapackage)
+  Starillus is a lightweight Linux desktop based on Pillarius Desktop, which is
+  assembled from Pillarium 2.0 (the window manager and desktop shell), Spacer
+  (the LightDM greeter) and Cadet (the companion toolkit/applications).
+  .
+  This metapackage pulls in the complete Starillus desktop in one step:
+  .
+    sudo apt install starillus-desktop
+  .
+  Compared to the Pillarius desktop metapackage this adds:
+  .
+    * pilot           - the Pilot web browser (a fork of Chromium)
+    * flatpak         - Flatpak support with Flathub enabled
+    * starillus-app-center - central app platform with anti-virus scanning
+    * starillus-av    - resident anti-virus daemon (on-access + scheduled scans)
+  .
+  The optional desktop applications -- Planet (package manager) and Planet
+  Control Center (settings) -- are pulled in as recommendations.

@@ -1,0 +1,58 @@
+# Pilot DEPS — Chromium dependency manifest (gclient format)
+# Adapted from Chromium's DEPS, trimmed for the Pilot fork.
+
+vars = {
+  "chromium_git": "https://chromium.googlesource.com",
+  "github_git": "https://github.com",
+}
+
+deps = {
+  "src/base": {
+    "packages": [
+      {
+        "package": "buildtools/third_party/libc++",
+        "version": "revision:abcdef0123456789abcdef0123456789abcdef01",
+      },
+    ],
+  },
+  "src/build": None,
+  "src/buildtools": None,
+  "src/third_party/abseil-cpp": None,
+  "src/third_party/angle": None,
+  "src/third_party/angle/third_party/Vulkan-Headers": None,
+  "src/third_party/boringssl": None,
+  "src/third_party/cef": None,
+  "src/third_party/crashpad": None,
+  "src/third_party/icu": None,
+  "src/third_party/libjpeg_turbo": None,
+  "src/third_party/libpng": None,
+  "src/third_party/libwebp": None,
+  "src/third_party/libxml": None,
+  "src/third_party/libxslt": None,
+  "src/third_party/skia": None,
+  "src/third_party/zlib": None,
+  "src/v8": None,
+}
+
+# Pilot-specific dependencies
+deps.update({
+  "src/pilot/python-ui": {
+    "url": "{chromium_git}/external/github.com/sushipie314/Pilot.git",
+    "version": "main",
+  },
+})
+
+hooks = [
+  {
+    "name": "clang",
+    "pattern": ".",
+    "action": [
+      "python3", "src/tools/clang/scripts/update.py",
+    ],
+  },
+  {
+    "name": "chrome_android",
+    "pattern": ".",
+    "action": [],
+  },
+]

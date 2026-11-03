@@ -1,0 +1,116 @@
+{
+  "$schema": "https://starillus.dev/schemas/pillarium-config.json",
+  "comment": "Starillus default Pillarium 2.0 configuration. Shipped as /etc/skel/.pillarium/config.json.",
+  "theme": "starillus-dark",
+  "wallpaper": "starillus-dawn",
+  "quick_launch": [
+    {
+      "cmd": ["pilot"],
+      "label": "Pilot",
+      "icon": "pilot",
+      "desktop_file": "/usr/share/applications/pilot.desktop"
+    },
+    {
+      "cmd": ["xterm"],
+      "label": "Terminal",
+      "icon": "mini.xterm",
+      "desktop_file": "/usr/share/applications/debian-xterm.desktop"
+    },
+    {
+      "cmd": ["starillus-app-center"],
+      "label": "App Center",
+      "icon": "starillus-app-center",
+      "desktop_file": "/usr/share/applications/starillus-app-center.desktop"
+    },
+    {
+      "cmd": ["planet-control-center"],
+      "label": "Settings",
+      "icon": "preferences-system",
+      "desktop_file": "/usr/share/applications/planet-control-center.desktop"
+    }
+  ],
+  "desktop_icons": [
+    {
+      "cmd": ["starillus-app-center"],
+      "label": "App Center",
+      "icon": "starillus-app-center",
+      "desktop_file": "/usr/share/applications/starillus-app-center.desktop"
+    },
+    {
+      "cmd": ["pilot"],
+      "label": "Pilot",
+      "icon": "pilot",
+      "desktop_file": "/usr/share/applications/pilot.desktop"
+    },
+    {
+      "cmd": ["xterm"],
+      "label": "Terminal",
+      "icon": "mini.xterm",
+      "desktop_file": "/usr/share/applications/debian-xterm.desktop"
+    }
+  ],
+  "taskbar_override_redirect": true,
+  "desktops": 4,
+  "desktop_names": [],
+  "taskbar": {
+    "position": "bottom",
+    "show_desktops": true,
+    "show_clock": true,
+    "show_battery": true,
+    "show_wifi": true,
+    "show_bluetooth": true,
+    "show_audio": true,
+    "show_ethernet": true,
+    "show_power": true,
+    "show_launcher": true,
+    "show_quick_launch": true,
+    "compact": false
+  },
+  "monitors": {
+    "taskbar_per_monitor": true,
+    "primary_follows_pointer": false,
+    "wallpaper_per_monitor": true,
+    "placement": "pointer"
+  },
+  "focus": {
+    "follows_mouse": false
+  },
+  "launcher": {
+    "max_results": 200,
+    "include_desktop_icons": true,
+    "include_quick_launch": true
+  },
+  "alerts": {
+    "enabled": true,
+    "sound": true,
+    "volume": 0.6,
+    "startup": true,
+    "warning": true,
+    "error": true,
+    "startup_timeout": 6.0,
+    "warning_timeout": 0.0,
+    "error_timeout": 0.0
+  },
+  "hotkeys": {
+    "launcher": "Alt+Space",
+    "cycle_windows": "Alt+Tab",
+    "close_window": "Alt+F4",
+    "terminal": "Alt+Return",
+    "theme_cycle": "Alt+Shift+D",
+    "power_menu": "Alt+Shift+P",
+    "wifi_menu": "Alt+Shift+W",
+    "ethernet_menu": "Alt+Shift+E",
+    "bluetooth_menu": "Alt+Shift+B",
+    "audio_menu": "Alt+Shift+A",
+    "processes": "Alt+Shift+M",
+    "refresh_desktop": "Alt+Shift+R",
+    "edit_quick_launch": "Alt+q",
+    "next_desktop": "Ctrl+Alt+Right",
+    "previous_desktop": "Ctrl+Alt+Left",
+    "desktop_1": "Ctrl+Alt+1",
+    "desktop_2": "Ctrl+Alt+2",
+    "desktop_3": "Ctrl+Alt+3",
+    "desktop_4": "Ctrl+Alt+4",
+    "show_desktop": "Super+d"
+  }
+}

@@ -1,0 +1,5 @@
+linux-*.tar.xz
+linux-*/
+output/
+.config
+.starmod-build

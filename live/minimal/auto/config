@@ -1,0 +1,35 @@
+#!/bin/sh
+set -e
+
+lb config noauto \
+    --mode debian \
+    --distribution trixie \
+    --debian-installer-distribution trixie \
+    --debian-installer live \
+    --archive-areas "main contrib non-free non-free-firmware" \
+    --bootstrap-flavour minimal \
+    --initsystem systemd \
+    --apt-indices false \
+    --apt-recommends false \
+    --apt-secure false \
+    --source false \
+    --binary-images iso-hybrid \
+    --iso-application "Starillus OS" \
+    --iso-publisher "Starillus Developers <https://github.com/PillarTree/Starillus>" \
+    --iso-volume "Starillus $(date +%Y%m%d)" \
+    --bootappend-live "boot=live components quiet splash console=ttyS0" \
+    --bootappend-failsafe "boot=live components noautologin" \
+    --linux-flavours amd64 \
+    --linux-packages linux-image-amd64 \
+    --firmware-chroot false \
+    --firmware-binary false \
+    --memtest memtest86+ \
+    --win32-loader false \
+    --security false \
+    --mirror-bootstrap http://ftp.debian.org/debian \
+    --mirror-chroot http://ftp.debian.org/debian \
+    --mirror-binary http://ftp.debian.org/debian \
+    --parent-mirror-bootstrap http://ftp.debian.org/debian \
+    --parent-mirror-chroot http://ftp.debian.org/debian \
+    --parent-mirror-binary http://ftp.debian.org/debian \
+    "${@}"

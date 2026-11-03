@@ -1,0 +1,10 @@
+# Starillus OS
+output/
+*.iso
+*.iso.sha256
+*.deb
+__pycache__/
+*.pyc
+.venv/
+build/
+*.log

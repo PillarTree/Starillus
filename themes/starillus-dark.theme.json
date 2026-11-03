@@ -1,0 +1,29 @@
+{
+  "name": "Starillus Dark",
+  "slug": "starillus-dark",
+  "mode": "dark",
+  "description": "Starillus default dark theme for Pillarium 2.0.",
+  "colors": {
+    "background": "#0f1115",
+    "surface": "#1a1d23",
+    "surface_alt": "#252933",
+    "panel": "#16181d",
+    "panel_hover": "#2a2e3a",
+    "accent": "#7b2cbf",
+    "accent_hover": "#9b4eda",
+    "border": "#3a3f4b",
+    "border_strong": "#545a6b",
+    "text": "#e8eaf0",
+    "text_dim": "#9aa0ae",
+    "text_faint": "#6b707e",
+    "success": "#2ecc71",
+    "warning": "#f1c40f",
+    "error": "#e74c3c",
+    "info": "#3498db"
+  },
+  "radius": 8,
+  "font": {
+    "family": "Inter",
+    "size": 13
+  }
+}

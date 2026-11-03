@@ -1,0 +1,72 @@
+# Starillus OS APT package list
+# Base system (Debian stable)
+base-files
+bash
+coreutils
+debconf
+debianutils
+init-system-helpers
+libc6
+login
+mount
+perl-base
+sed
+systemd
+systemd-sysv
+util-linux
+
+# Kernel & firmware
+linux-image-amd64
+linux-firmware
+
+# Bootloader
+grub-pc
+grub-efi-amd64
+
+# Network
+network-manager
+wireless-tools
+wpasupplicant
+dhcpcd5
+
+# X11 & graphics
+xorg
+xserver-xorg
+xinit
+x11-xserver-utils
+mesa-vulkan-drivers
+mesa-va-drivers
+
+# Pillarium 2.0 desktop (Pillarius Desktop foundation)
+pillarium            # the Pillarium 2.0 window manager / shell
+spacer-greeter       # LightDM greeter
+cadet                # companion toolkit / applications
+planet               # package manager front-end
+planet-control-center# desktop settings
+libreoffice          # LibreOffice office suite (Writer, Calc, Impress, Draw, Base, Math)
+
+# LightDM display manager
+lightdm
+
+# Starillus additions
+pilot                # Pilot browser (fork of Chromium)
+flatpak              # Flatpak support
+flatpak-xdg-utils    # Flatpak desktop integration
+flatpak-session-helper
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+
+# Starillus App Center + anti-virus
+starillus-app-center # central app platform (Ubuntu App Center-like) with AV
+starillus-av         # anti-virus daemon (on-access + scheduled scans)
+clamav               # anti-virus engine backing starillus-av
+clamav-freshclam     # virus definition updates
+
+# Pillarius base apps
+xdg-user-dirs
+xdg-utils
+p7zip-full
+unzip
+
+# Terminal
+xterm

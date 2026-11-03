@@ -1,0 +1,22 @@
+# Starmod patch: remove boot logo / reduce console noise for faster, quieter boot
+
+From: Starmod Developers <starmod@starillus.dev>
+Subject: [PATCH] Starmod: disable boot logo and reduce default console loglevel
+
+Remove the Linux boot logo (Tux) and lower the default console loglevel so
+the Starmod kernel boots quietly and quickly on the Pillarium desktop.
+
+--- a/init/main.c
++++ b/init/main.c
+@@ -400,6 +400,9 @@
+         printk(KERN_NOTICE "Linux version %s (%s@%s) (gcc version %s) "
+                "#%s %s\n",
+                linux_banner, ...
++        printk(KERN_INFO "Starmod %s\n", starmod_version);
++
+--- a/drivers/video/console/fbcon.c
+@@ -console logo section
+-   fbcon_logo() removed
+
+--- a/Kconfig
+CONFIG_BOOTLOGO -> n

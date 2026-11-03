@@ -1,0 +1,93 @@
+# Starillus OS live image package list
+
+# Kernel
+#if ARCHITECTURES amd64
+linux-image-amd64
+#endif
+#if ARCHITECTURES arm64
+linux-image-arm64
+raspi-firmware
+#endif
+
+# Base system
+live-boot
+live-config-systemd
+user-setup
+
+# Display manager
+lightdm
+
+# X11
+xorg
+x11-xserver-utils
+x11-utils
+xinit
+feh
+
+# Pillarium 2.0 desktop dependencies
+python3
+python3-xlib
+python3-pil
+python3-cairosvg
+picom
+
+# customtkinter installed via pip in chroot hook
+python3-pip
+
+# Terminal
+xterm
+
+# Starillus packages (installed from local .deb includes)
+# pilot, starillus-app-center, starillus-av, starillus-desktop metapackage
+
+# Networking
+network-manager
+isc-dhcp-client
+wpasupplicant
+wireless-tools
+
+# Flatpak support
+flatpak
+flatpak-xdg-utils
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+
+# Anti-virus
+clamav
+clamav-freshclam
+
+# Starillus package manager (starapt)
+python3-pip
+
+# Fonts
+fonts-dejavu-core
+xfonts-base
+
+# Essentials
+sudo
+ca-certificates
+#if ARCHITECTURES amd64 i386
+syslinux-utils
+isolinux
+#endif
+
+# Polkit
+polkitd
+pkexec
+
+# Desktop integration
+xdg-utils
+xdg-user-dirs
+media-types
+
+# Starillus installer: kexec-based Debian Installer
+kexec-tools
+cpio
+xz-utils
+zstd
+
+# System utilities
+curl
+wget
+gzip
+xz-utils

@@ -1,0 +1,19 @@
+# Starillus OS pre-installed Flatpak runtimes and applications
+# These are installed from Flathub (added as a remote in flatpak/).
+
+# Runtimes
+org.freedesktop.Platform//23.08
+org.freedesktop.Sdk//23.08
+org.gnome.Platform//45
+
+# Applications
+org.mozilla.firefox
+org.libreoffice.LibreOffice
+org.gimp.GIMP
+org.inkscape.Inkscape
+org.blender.Blender
+org.videolan.VLC
+org.telegram.desktop
+org.signal.Signal
+com.discordapp.Discord
+org.filezillapro.Filezilla
